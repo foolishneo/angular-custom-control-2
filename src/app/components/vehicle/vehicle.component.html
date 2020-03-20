@@ -1,0 +1,18 @@
+<form [formGroup]="vehicleForm">
+  <mat-form-field class="col-4">
+    <mat-label>Make</mat-label>
+    <mat-select formControlName="make">
+      <mat-option *ngFor="let m of carMake" [value]="m">
+        {{ m }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="col-4">
+    <input type="date" matInput formControlName="regoDate" placeholder="Registration date"/>
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="add.emit($event)">Add</button>
+  <button mat-button color="warn" (click)="remove.emit($event)">Remove</button>
+  
+</form>
