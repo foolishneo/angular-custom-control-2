@@ -1,8 +1,8 @@
 <form [formGroup]="vehicleListForm" (ngSubmit)="onSubmit()">
   <mat-form-field class="col-6">    
-    <input matInput placeholder="Your name" formControllerName="name" />
+    <input matInput placeholder="Your name" formControlName="name" />
   </mat-form-field>
-  <!-- <div formArrayName="vehicles">
+  <div formArrayName="vehicles">
     <mat-label class="m-3">Please list all vehicles in your household</mat-label>
     <div *ngFor="let v of vehicles.controls; let i=index">
       <app-vehicle 
@@ -12,6 +12,6 @@
         (remove)="changeVehicelList(i)"
       ></app-vehicle>
     </div>
-  </div> -->
+  </div>
   <button type="submit" mat-raised-button>Submit</button>
 </form>

@@ -14,7 +14,7 @@ export class AppComponent {
   carMakeList = CAR_MAKE;
   vehicleListForm: FormGroup = this.fb.group({
     name: [''],
-    //vehicles: this.fb.array([new Vehicle()])
+    vehicles: this.fb.array([new Vehicle()])
   });
 
   constructor(private fb: FormBuilder) { }

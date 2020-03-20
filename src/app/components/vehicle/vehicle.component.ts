@@ -37,8 +37,7 @@ export class VehicleComponent implements ControlValueAccessor, OnDestroy {
   }
 
   registerOnChange(fn) {
-    this.vehicleForm.valueChanges.pipe(
-      //delay(0), 
+    this.vehicleForm.valueChanges.pipe(     
       takeWhile(() => this.isAlive)
     )
     .subscribe(fn);
